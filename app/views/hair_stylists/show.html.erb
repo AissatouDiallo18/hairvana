@@ -1,22 +1,25 @@
-<div>
-<h1><%= @hairstylist.business_name %></h1>
-</div>
+<div class="d-flex justify-content-center full-show-page">
+<div style="text-align: center">
+  <div id="show-headline">
+  <h1><%= @hairstylist.business_name %></h1>
+  </div>
 
-<div>
-<img class="Show-detail-image" src="<%= @hairstylist.image_url %>" alt="Hairstylist_image
-">
-</div>
+  <div>
+  <img class="show-detail-image" src="<%= @hairstylist.image_url %>" alt="Hairstylist_image">
+  </div> 
 
-<div>
-<h4>Contact information</h4>
-<p>Location: <%= @hairstylist.address %></p>
-<p>Phone number: <%= @hairstylist.phone_number %></p>
-</div>
+  <div class="show-box">
+  <h4>Contact information</h4>
+  <p>Location: <%= @hairstylist.address %></p>
+  <p>Phone number: <%= @hairstylist.phone_number %></p>
+  </div>
 
-<div>
-<h4>My available Timeslots:</h4>
-<%#inserting timeslots%>
-<%#inserting Booking button%>
-</div>
+  <div>
+  <h4>My available Timeslots:</h4>
+  <%#inserting timeslots%>
+  <%#inserting Booking button%>
+  </div>
 
-<button class="button-appointment" type="button">Book Appointment!</button>
+  <button class="button-appointment" type="button">Book Appointment!</button>
+</div>
+</div>
