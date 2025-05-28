@@ -1,13 +1,3 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
 puts "Destroying all bookings…"
 Booking.destroy_all
 puts "Destroying all hair_stylist…"
@@ -33,28 +23,45 @@ hairstylist14 = HairStylist.create(business_name: "Awesome Cuts", address: "74-3
 hairstylist15 = HairStylist.create(business_name: "Glow & Go", address: "86 Monroe St, Newark, New Jersey 07105", phone_number: "+190378232", image_url: "https://d2zdpiztbgorvt.cloudfront.net/us/images/161969/cover_155003016823.jpeg?size=640x427")
 
 puts "Creating users…"
-user1 = User.create(first_name: "Jennifer", last_name: "Jones", hair_length: 30, email: "jen@example.com", password: "123456")
-user2 = User.create(first_name: "Jane", last_name: "Long", hair_length: 30, email: "jane@example.com", password: "123456")
+user1 = User.create(first_name: "Jenny", last_name: "Jones", hair_length: 30, email: "jen@example.com", password: "123456")
+user2 = User.create(first_name: "Jung", last_name: "Lee", hair_length: 30, email: "jung@example.com", password: "123456")
 user3 = User.create(first_name: "Lola", last_name: "Muller", hair_length: 20, email: "lola@example.com", password: "123456")
-user4 = User.create(first_name: "Laura", last_name: "Green", hair_length: 25, email: "laura@example.com", password: "123456")
-user5 = User.create(first_name: "Joe", last_name: "Thomas", hair_length: 18, email: "laura@example.com", password: "123456")
+user4 = User.create(first_name: "Andre", last_name: "Bauer", hair_length: 25, email: "Andre@example.com", password: "123456")
+user5 = User.create(first_name: "Johannes", last_name: "Thomas", hair_length: 18, email: "Jojo@example.com", password: "123456")
 user6 = User.create(first_name: "Aisha", last_name: "Löwe", hair_length: 78, email: "Aisha@example.com", password: "123456")
-user7 = User.create(first_name: "Ceren", last_name: "Özil", hair_length: 48, email: "Ceren@example.com", password: "123456")
-user8 = User.create(first_name: "Ingo", last_name: "White", hair_length: 48, email: "Ingo@example.com", password: "123456")
-user9 = User.create(first_name: "Santiago", last_name: "Bernabeu", hair_length: 48, email: "Ceren@example.com", password: "123456")
-user10 = User.create(first_name: "Talal", last_name: "Jamal", hair_length: 48, email: "Ceren@example.com", password: "123456")
-
+user7 = User.create(first_name: "Feme", last_name: "Kane", hair_length: 48, email: "Feme@example.com", password: "123456")
+user8 = User.create(first_name: "Ingo", last_name: "White", hair_length: 42, email: "Ingo@example.com", password: "123456")
+user9 = User.create(first_name: "Daniel", last_name: "Crasemann", hair_length: 34, email: "Daniel@example.com", password: "123456")
+user10 = User.create(first_name: "Talal", last_name: "Jamal", hair_length: 48, email: "Talal@example.com", password: "123456")
 
 puts "Creating timeslots…"
-timeslot1 = TimeSlot.create(hair_stylist: hairstylist1, start_time: "10:00", end_time: "11:30", available: true, date: "2025-2-20")
-timeslot2 = TimeSlot.create(hair_stylist: hairstylist2, start_time: "09:00", end_time: "11:30", available: true, date: "2025-2-23")
+timeslot1 = TimeSlot.create(hair_stylist: hairstylist1, start_time: "9:00", end_time: "11:30", available: true, date: "2025-2-20")
+timeslot1 = TimeSlot.create(hair_stylist: hairstylist1, start_time: "11:40", end_time: "13:30", available: true, date: "2025-2-20")
+timeslot1 = TimeSlot.create(hair_stylist: hairstylist1, start_time: "13:40", end_time: "16:30", available: true, date: "2025-2-20")
+timeslot1 = TimeSlot.create(hair_stylist: hairstylist1, start_time: "15:05", end_time: "15:50", available: true, date: "2025-12-12")
+timeslot1 = TimeSlot.create(hair_stylist: hairstylist1, start_time: "12:30", end_time: "17:30", available: true, date: "2025-4-4")
+timeslot2 = TimeSlot.create(hair_stylist: hairstylist2, start_time: "09:00", end_time: "11:00", available: true, date: "2025-2-23")
+timeslot2 = TimeSlot.create(hair_stylist: hairstylist2, start_time: "11:15", end_time: "13:30", available: true, date: "2025-2-23")
+timeslot2 = TimeSlot.create(hair_stylist: hairstylist2, start_time: "13:40", end_time: "15:30", available: true, date: "2025-2-23")
+timeslot2 = TimeSlot.create(hair_stylist: hairstylist2, start_time: "16:20", end_time: "17:30", available: true, date: "2025-2-23")
+timeslot2 = TimeSlot.create(hair_stylist: hairstylist2, start_time: "17:45", end_time: "20:30", available: true, date: "2025-2-23")
 timeslot3 = TimeSlot.create(hair_stylist: hairstylist3, start_time: "11:00", end_time: "12:30", available: true, date: "2024-4-23")
 timeslot4 = TimeSlot.create(hair_stylist: hairstylist4, start_time: "10:00", end_time: "12:30", available: false, date: "2022-4-10")
 timeslot5 = TimeSlot.create(hair_stylist: hairstylist5, start_time: "11:30", end_time: "12:30", available: true, date: "2025-1-1")
 timeslot6 = TimeSlot.create(hair_stylist: hairstylist6, start_time: "9:30", end_time: "12:00", available: false, date: "2025-11-11")
-
+timeslot7 = TimeSlot.create(hair_stylist: hairstylist7, start_time: "11:30", end_time: "12:00", available: false, date: "2025-11-11")
+timeslot8 = TimeSlot.create(hair_stylist: hairstylist8, start_time: "13:30", end_time: "16:00", available: false, date: "2025-11-11")
+timeslot9 = TimeSlot.create(hair_stylist: hairstylist9, start_time: "11:30", end_time: "12:00", available: true, date: "2025-11-11")
+timeslot10 = TimeSlot.create(hair_stylist: hairstylist10, start_time: "8:30", end_time: "12:00", available: true, date: "2025-11-11")
 
 puts "Creating bookings…"
-# booking1 = Booking.create(user_id: "#{User1}", time_slot_id: "#{Timeslot1}")
-# # Booking2 = Booking.create(user_id: "3", time_slot_id: 11)
-# # Booking3 = Booking.create(user_id: "4", time_slot_id: 12)
+booking1 = Booking.create(user_id: user1, time_slot_id: timeslot1)
+booking2 = Booking.create(user_id: user2, time_slot_id: timeslot2)
+booking3 = Booking.create(user_id: user3, time_slot_id: timeslot3)
+booking4 = Booking.create(user_id: user4, time_slot_id: timeslot4)
+booking5 = Booking.create(user_id: user5, time_slot_id: timeslot5)
+booking6 = Booking.create(user_id: user6, time_slot_id: timeslot6)
+booking7 = Booking.create(user_id: user7, time_slot_id: timeslot7)
+booking8 = Booking.create(user_id: user8, time_slot_id: timeslot8)
+booking9 = Booking.create(user_id: user9, time_slot_id: timeslot9)
+booking10 = Booking.create(user_id: user10, time_slot_id: timeslot10)
