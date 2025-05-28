@@ -2,12 +2,23 @@
 <html>
   <head>
     <title>Hairvana</title>
+    <%= favicon_link_tag asset_path('afro-hair-beauty-logo-free-vector.jpg') %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <nav class="navbar navbar-light bg-light d-flex justify-content-between">
+      <div><img class="logo" src="https://static.vecteezy.com/system/resources/previews/007/243/101/non_2x/afro-hair-beauty-logo-free-vector.jpg" width="70" height="70" class="d-inline-block align-top" alt=""></div>
+      <h1 class="abril-fatface-regular">HAIRVANA</h1>
+      <div style="width:70"></div>
+    </nav>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Boldonse&family=Coral+Pixels&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
