@@ -1,8 +1,22 @@
-<h1><%= @hairstylist.business_name %></h1>\
+<div>
+<h1><%= @hairstylist.business_name %></h1>
+</div>
+
+<div>
+<img class="Show-detail-image" src="<%= @hairstylist.image_url %>" alt="Hairstylist_image
+">
+</div>
+
+<div>
 <h4>Contact information</h4>
 <p>Location: <%= @hairstylist.address %></p>
 <p>Phone number: <%= @hairstylist.phone_number %></p>
+</div>
 
+<div>
 <h4>My available Timeslots:</h4>
 <%#inserting timeslots%>
 <%#inserting Booking button%>
+</div>
+
+<button class="button-appointment" type="button">Book Appointment!</button>
