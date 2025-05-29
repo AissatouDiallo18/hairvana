@@ -1,5 +1,7 @@
-<h1>Book a timeslot!</h1>
 
-<% @time_slots.each do |timeslot| %>
-<%= timeslot.start_time %> - <%= timeslot.end_time %>
+
+<h1><strong>New Booking for <%= @hairstylist.business_name %></h1></strong>
+<%= simple_form_for [@hairstylist, @booking] do |f| %>
+  <%= f.association :time_slot, collection: @time_slots, label_method: :time_format %>
+  <%= f.submit "Submit Booking", class: "btn btn-primary" %>
 <% end %>
