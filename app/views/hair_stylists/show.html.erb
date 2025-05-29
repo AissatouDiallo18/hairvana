@@ -22,6 +22,7 @@
     </div>
   </div>
 
+
   <div>
     <button class="button-appointment" type="button">Book Appointment!</button>
   </div>
@@ -30,5 +31,15 @@
     <h4> Reviews: *****</h4>
   </div>
 
-</div>
+
+
+ <div>
+  <h4>My available Timeslots:</h4>
+  <%#inserting timeslots%>
+  <%#inserting Booking button%>
+  </div>
+   <%= link_to "Book Appointment!", new_booking_path(hairstylist: @hairstylist.id), class: "btn btn-neutral button-appointment" %>
+ </div>
+
+ster</div>
 
