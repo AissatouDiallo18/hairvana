@@ -1,35 +1,4 @@
-.index_card_img {
-  height: 350px;
-  border-radius: 15px;
-  padding: 10px;
-}
-
-#index_card_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
-}
-
-.index_card {
-  margin: 20px;
-  box-shadow: rgb(226, 226, 226) 3px 3px 5px;
-  border-radius: 10px;
-}
-
-.index_card_title {
-  text-align: left;
-  a {
-    text-decoration: none;
-    font-size: 20px;
-    color: black;
-    padding-left: 20px;
-  }
-}
-
-.index_card_title:hover {
-  color: grey;
-}
-
+// navbar css
 .abril-fatface-regular {
   font-family: "Abril Fatface", serif;
   font-weight: 400;

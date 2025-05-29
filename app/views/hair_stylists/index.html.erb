@@ -1,12 +1,23 @@
-<div id="index_card_container">
-  <% @hair_stylists.each do |hair_stylist| %>
-    <div class="index_card">
+<div id="big-box">
+  <div id="hairstylists-list">
+    <% @hair_stylists.each do |hair_stylist| %>
+      <div class='index_card'>
         <img class="index_card_img" src="<%=hair_stylist.image_url%>" alt="hair image">
-      <div class="index_card_title">
-        <p>
-          <%= link_to hair_stylist.business_name, hair_stylist %>
-        </p>
+        <div class="index_card_title">
+          <p>
+            <%= link_to hair_stylist.business_name, hair_stylist %>
+          </p>
+        </div>
+        <div class="index_card_subtitle">
+          <p>
+            <%= link_to hair_stylist.address, hair_stylist %>
+          </p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
+  <div>
+    <img id="map" src=''>
+  </div>
 </div>
