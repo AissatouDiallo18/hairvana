@@ -8,23 +8,25 @@
   </div> 
 
   <div class="col-4 col-lg-4">
-    <div class="show-box">
+    <div class="contact-box-show">
       <h4>Contact information</h4>
       <p>Location: <%= @hairstylist.address %></p>
       <p>Phone number: <%= @hairstylist.phone_number %></p>
     </div>
   
 
-    <div>
+    <div class="timeslots-box-show">
         <h4>My available Timeslots:</h4>
         <%#inserting timeslots%>
         <%#inserting Booking button%>
     </div>
+
+    <div>
+      <button class="button-appointment" type="button">Book Appointment!</button>
+    </div>
   </div>
 
-  <div>
-    <button class="button-appointment" type="button">Book Appointment!</button>
-  </div>
+  
 
   <div class="reviews-box-show">
     <h4> Reviews: *****</h4>
