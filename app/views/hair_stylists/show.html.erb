@@ -13,7 +13,7 @@
 
   <div class="col-8 col-lg-8">
     <img class="show-detail-image w-100" src="<%= @hairstylist.image_url %>" alt="Hairstylist_image">
-  </div> 
+  </div>
 
 
   <div class="col-4 col-lg-4">
@@ -22,7 +22,7 @@
       <p>Location: <%= @hairstylist.address %></p>
       <p>Phone number: <%= @hairstylist.phone_number %></p>
     </div>
-  
+
 
     <div class="timeslots-box-show">
         <h4>My available Timeslots:</h4>
@@ -30,22 +30,21 @@
           <% if time_slot.available == true %>
             <p> <%= time_slot.date.strftime("%A, %d.%m.%Y") %> </p>
             <p> <%= time_slot.start_time.strftime ("%H:%M")%> - <%= time_slot.end_time.strftime ("%H:%M") %> </p>
-          <% end %> 
+          <% end %>
         <% end %>
     </div>
 
     <div>
-      <button class="button-appointment" type="button">Book Appointment!</button>
-    </div>
-
-
-    <div>
-    <%= link_to "Book Appointment!", new_booking_path(hairstylist: @hairstylist.id), class: "btn btn-neutral button-appointment" %>
+    <% if user_signed_in? %>
+      <%= link_to "Book Appointment!", new_hair_stylist_booking_path(@hairstylist.id), class: "btn btn-primary button-appointment" %>
+    <% else %>
+      <p>Please log in to make a booking!</p>
+    <% end %>
  </div>
 
   </div>
 
-  
+
 
   <div class="reviews-box-show">
     <h4> Reviews: *****</h4>
@@ -56,6 +55,6 @@
 <p><strong>Bookings</strong></p>
 <ul class="list-group">
   <% @hairstylist.bookings.each do |booking| %>
-    <li class="list-group-item"><%= booking.content %></li>
+    <li class="list-group-item"><%= booking.user.first_name %></li>
   <% end %>
 </ul>
