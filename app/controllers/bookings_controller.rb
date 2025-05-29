@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
   def new
-    raise
     @booking = Booking.new
-    @time_slots =
+    @time_slots = HairStylist.find(params[:hairstylist]).time_slots
+    raise
   end
 
   def create

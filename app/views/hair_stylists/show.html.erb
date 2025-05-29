@@ -18,5 +18,4 @@
 <%#inserting timeslots%>
 <%#inserting Booking button%>
 </div>
-
-<button class="button-appointment" type="button">Book Appointment!</button>
+<%= link_to "Book Appointment!", new_booking_path(hairstylist: @hairstylist.id), class: "btn btn-neutral button-appointment" %>

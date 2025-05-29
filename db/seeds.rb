@@ -1,3 +1,4 @@
+TimeSlot.destroy_all
 puts "Destroying all bookings…"
 Booking.destroy_all
 puts "Destroying all hair_stylist…"
@@ -54,14 +55,14 @@ timeslot8 = TimeSlot.create(hair_stylist: hairstylist8, start_time: "13:30", end
 timeslot9 = TimeSlot.create(hair_stylist: hairstylist9, start_time: "11:30", end_time: "12:00", available: true, date: "2025-11-11")
 timeslot10 = TimeSlot.create(hair_stylist: hairstylist10, start_time: "8:30", end_time: "12:00", available: true, date: "2025-11-11")
 
-puts "Creating bookings…"
-booking1 = Booking.create(user_id: user1, time_slot_id: timeslot1)
-booking2 = Booking.create(user_id: user2, time_slot_id: timeslot2)
-booking3 = Booking.create(user_id: user3, time_slot_id: timeslot3)
-booking4 = Booking.create(user_id: user4, time_slot_id: timeslot4)
-booking5 = Booking.create(user_id: user5, time_slot_id: timeslot5)
-booking6 = Booking.create(user_id: user6, time_slot_id: timeslot6)
-booking7 = Booking.create(user_id: user7, time_slot_id: timeslot7)
-booking8 = Booking.create(user_id: user8, time_slot_id: timeslot8)
-booking9 = Booking.create(user_id: user9, time_slot_id: timeslot9)
-booking10 = Booking.create(user_id: user10, time_slot_id: timeslot10)
+# puts "Creating bookings…"
+# booking1 = Booking.create(user_id: user1, time_slot_id: timeslot1)
+# booking2 = Booking.create(user_id: user2, time_slot_id: timeslot2)
+# booking3 = Booking.create(user_id: user3, time_slot_id: timeslot3)
+# booking4 = Booking.create(user_id: user4, time_slot_id: timeslot4)
+# booking5 = Booking.create(user_id: user5, time_slot_id: timeslot5)
+# booking6 = Booking.create(user_id: user6, time_slot_id: timeslot6)
+# booking7 = Booking.create(user_id: user7, time_slot_id: timeslot7)
+# booking8 = Booking.create(user_id: user8, time_slot_id: timeslot8)
+# booking9 = Booking.create(user_id: user9, time_slot_id: timeslot9)
+# booking10 = Booking.create(user_id: user10, time_slot_id: timeslot10)
