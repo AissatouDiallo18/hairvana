@@ -6,7 +6,7 @@
 
   <div>
   <img class="show-detail-image" src="<%= @hairstylist.image_url %>" alt="Hairstylist_image">
-  </div> 
+  </div>
 
   <div class="show-box">
   <h4>Contact information</h4>
@@ -24,3 +24,9 @@
  </div>
 </div>
 
+<p><strong>Bookings</strong></p>
+<ul class="list-group">
+  <% @restaurant.bookings.each do |booking| %>
+    <li class="list-group-item"><%= booking.content %></li>
+  <% end %>
+</ul>
