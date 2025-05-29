@@ -1,0 +1,54 @@
+#big-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#hairstylists-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+//index page css
+.index_card {
+  margin: 7px;
+  box-shadow: rgb(226, 226, 226) 0px 0px 10px;
+  border-radius: 10px;
+}
+
+.index_card_img {
+  max-width: 100%;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.index_card_title {
+  padding: 0px 20px;
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+}
+
+.index_card_subtitle {
+  font-size: 15px;
+  padding: 0px 20px;
+  a {
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+  }
+}
+
+.main-container {
+  display: flex;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.cards {
+  flex-grow: 1;
+}

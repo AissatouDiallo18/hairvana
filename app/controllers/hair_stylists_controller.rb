@@ -6,5 +6,6 @@ class HairStylistsController < ApplicationController
   
   def show
     @hairstylist = HairStylist.find(params[:id])
+    @timeslots = @hairstylist.time_slots
   end
 end
