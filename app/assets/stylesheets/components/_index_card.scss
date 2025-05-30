@@ -6,9 +6,16 @@
   text-align: center;
   font-size: 70px;
   text-decoration: underline;
+  color: black;
 }
 
 .logo{
   border-radius: 50%;
   padding-left: 4px;
+}
+
+.title {
+  a {
+    text-decoration: none;
+  }
 }
