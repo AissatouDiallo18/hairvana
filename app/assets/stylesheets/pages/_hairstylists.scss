@@ -2,6 +2,7 @@
   display: flex;
   // grid-template-columns: 2fr 1fr;
   justify-content: space-between;
+  width: 65%;
 }
 
 #hairstylists-list {
@@ -47,5 +48,7 @@
   margin: 7px;
   box-shadow: rgb(226, 226, 226) 0px 0px 10px;
   border-radius: 10px;
-  // position: fixed;
+  width: 34%;
+  position: fixed;
+  right: 5px;
 }
