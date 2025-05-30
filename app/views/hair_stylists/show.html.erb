@@ -1,4 +1,4 @@
-<%= link_to "index Page", hair_stylists_path, class: 'btn btn-secondary'%>
+<%= link_to "Back", hair_stylists_path, class: 'btn btn-secondary'%>
 
 <div class="row g-4 show-main-box">
   <div style= "text-align: left" id="show-headline">
@@ -9,14 +9,19 @@
 
   <div class="col-8 col-lg-8">
     <img class="show-detail-image w-100" src="<%= @hairstylist.image_url %>" alt="Hairstylist_image">
+    <div class="reviews-box-show">
+      <h4> Reviews: *****</h4>
+      <p> I am so happy with the result. Took me so long to find the perfect Hairstylist for me.
+      definitely resommend them. One notice tho: The mirrors were a little blurry. But besides that
+      perfect Service. I'll come back for sure! </p>
+    </div>
   </div>
-
   
   <div class="col-4 col-lg-4">
 
     <div class="service-box-show">
       <h4> Services </h4>
-      <p> *** insert services *** </p>
+      <p> <%= @hairstylist.services %> </p>
     </div>
 
     <div class="contact-box-show">
@@ -27,13 +32,18 @@
 
 
     <div class="timeslots-box-show">
-        <h4>My available Timeslots:</h4>
-        <% @timeslots.each do |time_slot| %>
-          <% if time_slot.available == true %>
-            <p> <%= time_slot.date.strftime("%A, %d.%m.%Y") %> </p>
-            <p> <%= time_slot.start_time.strftime ("%H:%M")%> - <%= time_slot.end_time.strftime ("%H:%M") %> </p>
-          <% end %>
-        <% end %>
+        <h4>Opening Hours</h4>
+        <ul>
+          <li> Monday: 9am - 6pm </li>
+          <li> Tuesday: 9am - 6pm </li>
+          <li> Wednesday: Closed </li>
+          <li> Thursday: 11am - 9pm </li>
+          <li> Friday: 9am - 8pm </li>
+          <li> Saturday: 9am - 8pm </li>
+          <li> Sunday: 11am - 6pm </li>
+
+        </ul>
+        
     </div>
 
     <div>
@@ -45,9 +55,7 @@
 
 
 
-  <div class="reviews-box-show">
-    <h4> Reviews: *****</h4>
-  </div>
+  
     </div>
 
 </div>
