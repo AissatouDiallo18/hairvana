@@ -1,6 +1,8 @@
 #big-box {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  // grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  width: 65%;
 }
 
 #hairstylists-list {
@@ -39,16 +41,14 @@
   color: rgb(94, 94, 94);
 }
 
-.main-container {
-  display: flex;
-}
-
-#map {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-}
-
-.cards {
-  flex-grow: 1;
+// map
+.map {
+  width: 100%;
+  height: calc(100vh - 122px);
+  margin: 7px;
+  box-shadow: rgb(226, 226, 226) 0px 0px 10px;
+  border-radius: 10px;
+  width: 34%;
+  position: fixed;
+  right: 5px;
 }
