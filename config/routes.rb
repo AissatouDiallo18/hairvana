@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "hair_stylists#index"
+  get "dashboard", to: "pages#dashboard"
   devise_for :users
   resources :hair_stylists, only: [:show, :index] do
     resources :bookings, only: [:new, :create]

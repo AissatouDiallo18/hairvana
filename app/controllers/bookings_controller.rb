@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     @booking.time_slot = @time_slot
     @booking.user = current_user
     @booking.save!
-    redirect_to hair_stylist_path(@hairstylist)
+    redirect_to dashboard_path
   end
 
    private
